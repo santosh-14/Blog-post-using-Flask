@@ -1,0 +1,8 @@
+<html>
+    <form action="/update_blog/{{res[0][0]}}" method="post">
+        enter username : <input type="text" name="uname" value="{{res[0][1]}}">
+        enter title for blog : <input type="text" name="title" value="{{res[0][2]}}">
+        write post here : <textarea name="post"  cols="150" rows="200">{{res[0][3]}}</textarea>
+        <input type="submit" value="update">
+    </form>
+</html>

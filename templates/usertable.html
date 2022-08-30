@@ -1,0 +1,29 @@
+<html>
+    
+    <table>
+        
+        {% for i in res %}
+        <h1>welcome to User profile</h1>
+        <tr>
+            <td>username : {{i[1]}}</td><br><br>
+        </tr>
+        <tr>
+            <td>password : {{i[2]}}</td><br><br>
+        </tr>
+        <tr>
+            <td>EmailId  : {{i[3]}}</td><br><br>
+        </tr>
+        <tr>
+            <td>city     : {{i[4]}}</td><br><br>
+        </tr>
+        <tr>
+            <a href="/viewpostuser">view post</a>
+        </tr>
+        
+
+        {% else %}
+        <h2>no data found</h2>
+        <h3>please enter valid userID and password</h3>
+        {% endfor %}
+    </table>
+</html>

@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+            .myDiv {
+        border: 5px outset rgb(0, 255, 55);
+        background-color: lightblue;    
+        text-align: center;
+    }
+
+        </style>
+        
+    </head>
+    <body>
+        <form action="/action_page.php">
+            <label for="authors">Choose author:</label>
+            <select name="authors" id="authors" multiple>
+            {% for j in rs %}    
+              <option value="{{j}}">{{j}}</option>
+            {% endfor %}
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+          </form>
+          
+    {% for i in res %}
+    <div class="myDiv">
+        
+       <h3>  author name : {{i[1]}}</h3>
+       <h2>  title : {{i[2]}}</h2>
+        {{i[3]}}<br>
+        
+        
+    </div> 
+    {% endfor %}
+    </body>
+</html>

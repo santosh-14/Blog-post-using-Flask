@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <style>
+            .myDiv {
+        border: 5px outset rgb(0, 255, 55);
+        background-color: lightblue;    
+        text-align: center;
+    }
+
+        </style>
+        
+    </head>
+    <body>
+
+    {% for i in res %}
+    <div class="myDiv">
+        
+       <h3>  author name : {{i[1]}}</h3>
+       <h2>  title : {{i[2]}}</h2>
+        {{i[3]}}<br>
+        
+        <a href="/edit_blog/{{i[0]}}"> edit blog</a>
+        <a href="/delete_blog/{{i[0]}}"> delete blog</a>
+        
+        
+    </div> 
+    {% endfor %}
+    </body>
+</html>
